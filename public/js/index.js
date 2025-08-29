@@ -1,4 +1,4 @@
-import { getUsuario, postUsuario } from '../services/services';
+import { getData,postData } from "../services/services.js";
 
 const loginBox = document.getElementById('loginBox');
 const registerBox = document.getElementById('registerBox');
