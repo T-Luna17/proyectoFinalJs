@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Permisos</title>
+    <link rel="stylesheet" href="../estilos/Estilos.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="form-box" id="loginBox">
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <input type="text" id="loginUserId" placeholder="ID Usuario" required>
+                <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                <button type="submit">Ingresar</button>
+            </form>
+            <p id="loginError" class="error"></p>
+            <p class="toggle">¿No tienes cuenta? <a href="../pages/Registrarse.html" id="showRegister">Regístrate aquí</a></p>
+        </div>
+    </div>
+</body>
+<script type="module" src="../js/index.js"></script>
+</html>

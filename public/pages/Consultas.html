@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal Profesor</title>
+    <link rel="shortcut icon" href="../imgs/user-account.png" type="image/x-icon">
+    <link rel="stylesheet" href="../estilos/Consultas.css">
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <h1 id="form-title">Agregar Consulta</h1>
+        <!-- Bloque de usuario -->
+        <div class="user-info">
+            <img src="../imgs/account.png" alt="Usuario" class="user-img">
+            <span class="user-name">Nombre del Usuario</span>
+        </div>
+    </div>
+
+        <button id="logoutBtn" onclick="location.href='../pages/inicio.html'">
+        <span>Cerrar sesión</span>
+        <div class="btn-cs">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+        </div>
+    </button>
+</header>
+
+
+<main>
+    <form id="consultaForm">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="text" id="descripcion" placeholder="Descripción" required>
+        <button type="submit" class="botonA">
+            <span>Guardar</span>
+            <div class="btn-add">
+                <!-- Icono SVG de agregar -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M12 5v14m-7-7h14"></path>
+                </svg>
+            </div>
+        </button>
+
+        <button type="button" id="cancelBtn" class="boton-cancelar">Cancelar</button>
+    </form>
+    <section class="lista-section">
+        <h2>Lista de Consultas</h2>
+        <div id="consultasLista"></div>
+    </section>
+</main>
+
+
+    <script src="../js/Api.js"  type="module"></script>
+</body>
+</html>
+

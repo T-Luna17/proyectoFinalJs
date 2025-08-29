@@ -1,96 +1,61 @@
 {
-  "tickets": [
+  "usuarios": [
     {
-      "id": 1,
-      "studentId": 1,
-      "studentName": "Adrian",
-      "question": "Duda sobre closures en JS",
-      "createdAt": "2025-08-27T10:10:00.000Z",
-      "status": "attended",
-      "attendedAt": "2025-08-27T10:30:00.000Z"
+      "id": "0504",
+      "nombre": "thais soto",
+      "password": "1234",
+      "rol": "estudiante"
     },
     {
-      "id": 2,
-      "studentId": 2,
-      "studentName": "Sofía",
-      "question": "Error al usar fetch con async/await",
-      "createdAt": "2025-08-27T10:50:00.000Z",
-      "status": "attended",
-      "attendedAt": "2025-08-27T11:05:00.000Z"
+      "id": "29",
+      "nombre": "Jeanca Barberena",
+      "password": "1234",
+      "rol": "profesor"
+    }
+  ],
+  "consultas": [
+    {
+      "id": "1",
+      "usuarioId": 2,
+      "consulta": "No entiendo el ejercicio 3",
+      "mensaje": "No hay mensaje del profesor",
+      "hora": "2025-08-27T10:15:00",
+      "estado": "rechazado",
+      "nombre": "Alejandro"
     },
     {
-      "id": 3,
-      "studentId": 3,
-      "studentName": "Luis",
-      "question": "Cómo ordenar resultados de JSON-Server",
-      "createdAt": "2025-08-27T12:55:00.000Z",
-      "status": "attended",
-      "attendedAt": "2025-08-27T13:20:00.000Z"
-    },
-
-    {
-      "id": 4,
-      "studentId": 4,
-      "studentName": "María",
-      "question": "Validación de formularios sin librerías",
-      "createdAt": "2025-08-26T09:00:00.000Z",
-      "status": "attended",
-      "attendedAt": "2025-08-26T09:15:00.000Z"
+      "id": "2",
+      "usuarioId": 3,
+      "consulta": "¿Cómo se usa map en JS?",
+      "mensaje": "No hay mensaje del profesor",
+      "hora": "2025-08-27T10:20:00",
+      "estado": "rechazado",
+      "nombre": "Moli"
     },
     {
-      "id": 5,
-      "studentId": 5,
-      "studentName": "Javier",
-      "question": "map vs forEach en rendimiento",
-      "createdAt": "2025-08-26T10:25:00.000Z",
-      "status": "attended",
-      "attendedAt": "2025-08-26T10:45:00.000Z"
+      "id": "3fa1",
+      "usuarioId": 1,
+      "consulta": "Tu me dejaste caer, pero ella me levantó",
+      "mensaje": "En que le puedo ayudar?",
+      "hora": "2025-08-27T19:31:50.095Z",
+      "estado": "rechazado",
+      "nombre": "Jean Carlos"
     },
     {
-      "id": 6,
-      "studentId": 6,
-      "studentName": "Camila",
-      "question": "CORS con JSON-Server",
-      "createdAt": "2025-08-26T15:25:00.000Z",
-      "status": "attended",
-      "attendedAt": "2025-08-26T15:50:00.000Z"
-    },
-
-    {
-      "id": 7,
-      "studentId": 7,
-      "studentName": "Andrés",
-      "question": "Diferencia entre PUT y PATCH",
-      "createdAt": "2025-08-25T08:25:00.000Z",
-      "status": "attended",
-      "attendedAt": "2025-08-25T08:40:00.000Z"
+      "id": "a9c4",
+      "nombre": "Alfredo",
+      "consulta": "Necesito ayuda",
+      "mensaje": "No hay mensaje del profesor",
+      "hora": "2025-08-28T19:36:13.322Z",
+      "estado": "rechazado"
     },
     {
-      "id": 8,
-      "studentId": 8,
-      "studentName": "Valeria",
-      "question": "Filtrar por rango de fechas en JSON-Server",
-      "createdAt": "2025-08-25T11:40:00.000Z",
-      "status": "attended",
-      "attendedAt": "2025-08-25T12:10:00.000Z"
-    },
-    {
-      "id": 9,
-      "studentId": 9,
-      "studentName": "Diego",
-      "question": "Cómo estructurar módulos ES",
-      "createdAt": "2025-08-25T15:40:00.000Z",
-      "status": "attended",
-      "attendedAt": "2025-08-25T16:05:00.000Z"
-    },
-
-    {
-      "id": 10,
-      "studentId": 10,
-      "studentName": "Paula",
-      "question": "Consulta pendiente de ejemplo (no debe verse en stats)",
-      "createdAt": "2025-08-27T14:00:00.000Z",
-      "status": "pending"
+      "id": "6d20",
+      "nombre": "Tamara",
+      "consulta": "Como hago esto",
+      "hora": "2025-08-28T21:08:28.758Z",
+      "estado": "rechazado",
+      "mensaje": "No hay mensaje del profesor"
     }
   ]
 }
