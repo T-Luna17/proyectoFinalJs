@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>📊 Estadísticas de Tiquetes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../estilos/estilos.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="#">Tiquetes en Clase</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Alternar navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="mainNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="./principal.html">Principal</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./estadisticas.html" aria-current="page">Estadísticas</a></li>
+          <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="container py-4">
+    <header class="mb-4">
+      <h1 class="h3 mb-1">📊 Estadísticas diarias¡Bienvenidos!</h1>
+      <p class="text-muted mb-0">
+        Listado de consultas <strong>atendidas</strong> (últimos 3 días).
+        Estructura base (Día 3). Filtros y métricas se implementan en el Día 4.
+      </p>
+    </header>
+    <section id="estado" class="estado mb-3" aria-live="polite"></section>
+    <section id="lista" class="lista mb-4" aria-label="Solicitudes atendidas"></section>
+    <section id="seccion-filtros" class="mb-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <form id="form-filtros" class="row g-2">
+            <div class="col-12 col-md-6">
+              <label for="input-busqueda" class="form-label mb-0">Buscar</label>
+              <input id="input-busqueda" type="search" class="form-control" placeholder="Por estudiante o palabra clave" />
+            </div>
+            <div class="col-12 col-md-3">
+              <label for="input-fecha-desde" class="form-label mb-0">Desde</label>
+              <input id="input-fecha-desde" type="date" class="form-control" />
+            </div>
+            <div class="col-12 col-md-3">
+              <label for="input-fecha-hasta" class="form-label mb-0">Hasta</label>
+              <input id="input-fecha-hasta" type="date" class="form-control" />
+            </div>
+            <div class="col-12 text-end">
+              <button id="btn-aplicar" class="btn btn-outline-primary btn-sm" type="submit" disabled>Aplicar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section id="seccion-tabla">
+      <div class="table-responsive shadow-sm">
+        <table class="table table-sm table-hover align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th scope="col">Estudiante</th>
+              <th scope="col">Fecha</th>
+              <th scope="col">Hora</th>
+              <th scope="col">Consulta</th>
+              <th scope="col">Estado</th>
+            </tr>
+          </thead>
+          <tbody id="tbody-estadisticas">
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section id="seccion-metricas" class="mt-4">
+      <div class="row g-3">
+        <div class="col-12 col-md-4">
+          <div class="card text-center h-100">
+            <div class="card-body">
+              <div class="text-muted">Total consultas</div>
+              <div id="metric-total" class="fs-3 fw-semibold">—</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card text-center h-100">
+            <div class="card-body">
+              <div class="text-muted">Promedio diario</div>
+              <div id="metric-promedio" class="fs-3 fw-semibold">—</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card text-center h-100">
+            <div class="card-body">
+              <div class="text-muted">Top estudiante</div>
+              <div id="metric-top" class="fs-3 fw-semibold">—</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="border-top py-3">
+    <div class="container small text-muted">
+      Sistema de Tiquetes • Día 3: GET + render con <code>map</code> ·
+      Proyecto Académico — Estructura inicial por Persona 3 (Día 3)
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>
