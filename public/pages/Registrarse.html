@@ -13,13 +13,15 @@
             <form id="registerForm">
                 <input type="text" id="registerName" placeholder="Nombre de usuario" required>
                 <input type="password" id="registerPassword" placeholder="Contraseña" required>
-                <button type="submit">Registrarse</button>
+                <!-- Selección de rol -->
+                <label for="registerRol">Rol:</label>
+                <select id="registerRol">
+                    <option value="estudiante" selected>Estudiante</option>
+                    <option value="profesor">Profesor</option>
+                </select><br>
+                <br><button type="submit">Registrarse</button>
             </form>
             <p id="registerError" class="error"></p>
             <p class="toggle">¿Ya tienes cuenta? <a href="inicio.html" id="showLogin">Inicia sesión aquí</a></p>
         </div>
     </div>
-
-    <script type="module" src="../js/registro.js"></script>
-</body>
-</html>
