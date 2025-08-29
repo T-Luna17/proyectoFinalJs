@@ -2,30 +2,37 @@ import { getData, postData, updateData, deleteData } from '../services/services.
 
 const form = document.getElementById('consultaForm');
 const listaConsultas = document.getElementById('consultasLista');
+const formTitle = document.getElementById("form-title");
+const cancelBtn = document.getElementById("cancelBtn");
+
+// --- Validar sesión y mostrar nombre de usuario ---
+const sessionUser = JSON.parse(localStorage.getItem('sessionUser'));
+if (!sessionUser) window.location.href = 'index.html';
+if (sessionUser.rol !== "profesor") window.location.href = 'ConsultasE.html';
+
+const userNameElement = document.querySelector('.user-name');
+if (userNameElement) userNameElement.textContent = sessionUser.nombre;
+
+// Llenar automáticamente el input "nombre" con el usuario logueado
+const inputNombre = document.getElementById("nombre");
+if (inputNombre && sessionUser) {
+    inputNombre.value = sessionUser.nombre;
+}
+
 
 // --- Logout ---
 const logoutBtn = document.getElementById("logoutBtn");
 logoutBtn.addEventListener("click", () => {
   localStorage.removeItem("sessionUser");
+  window.location.href = 'index.html';
 });
 
-// --- Validar sesión ---
-const sessionUser = JSON.parse(localStorage.getItem("sessionUser"));
-if (!sessionUser) {
-  // Aquí podrías redirigir: window.location.href = "login.html";
-}
-
-// --- Variables para edición ---
+// --- Resto de tu código original ---
 let editing = false;
 let consultaEditandoId = null;
-
-// NUEVAS VARIABLES
-const formTitle = document.getElementById("form-title");
-const cancelBtn = document.getElementById("cancelBtn");
 let editMode = false;
 let editId = null;
 
-// Cargar las consultas cuando inicia la página
 async function cargarConsultas() {
     const consultas = await getData('consultas');
     listaConsultas.innerHTML = '';
@@ -70,7 +77,6 @@ async function cargarConsultas() {
             btnEstadoConsulta.innerText = "R";
         }
 
-        // Cambiar estado
         btnEstadoConsulta.addEventListener("click", async () => {
             const consultaActualizar = {
                 id: consulta.id,
@@ -81,13 +87,11 @@ async function cargarConsultas() {
             cargarConsultas();
         });
 
-        // Editar consulta
         btnEditarConsulta.addEventListener("click", () => {
             startEdit(consulta);
             editarConsulta(consulta.id, consulta.mensaje);
         });
 
-        // Eliminar consulta
         btnEliminarConsulta.addEventListener("click", async () => {
             if (confirm('¿Seguro que deseas eliminar esta consulta?')) {
                 await deleteData("consultas", consulta.id);
@@ -107,7 +111,6 @@ async function cargarConsultas() {
     });
 }
 
-// Agregar una nueva consulta
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const nombre = document.getElementById("nombre").value.trim();
@@ -135,25 +138,19 @@ form.addEventListener('submit', async (e) => {
     cargarConsultas();
 });
 
-// Función para iniciar edición
 function startEdit(consulta) {
     editing = true;
     consultaEditandoId = consulta.id;
 }
 
-// Cancelar edición (original)
-cancelBtn.addEventListener('click', resetForm);
-
-function resetForm() {
+cancelBtn.addEventListener('click', () => {
     editing = false;
     consultaEditandoId = null;
-    document.getElementById('consultaTexto').value = '';
-    document.getElementById('form-title').textContent = 'Nueva Consulta';
-    document.getElementById('saveBtn').textContent = 'Guardar';
-    cancelBtn.classList.add('hidden');
-}
+    document.getElementById("consultaForm").reset();
+    formTitle.textContent = "Agregar Consulta";
+    cancelBtn.style.display = "none";
+});
 
-// NUEVA FUNCIÓN editarConsulta
 function editarConsulta(id, nombre) {
     document.getElementById("nombre").value = nombre || "";
     formTitle.textContent = "Editar Consulta";
@@ -161,15 +158,6 @@ function editarConsulta(id, nombre) {
     editMode = true;
     editId = id;
 }
-
-// Cancelar edición extra
-cancelBtn.addEventListener("click", () => {
-    document.getElementById("consultaForm").reset();
-    formTitle.textContent = "Agregar Consulta";
-    cancelBtn.style.display = "none";
-    editMode = false;
-    editId = null;
-});
 
 // Inicializar lista
 cargarConsultas();
