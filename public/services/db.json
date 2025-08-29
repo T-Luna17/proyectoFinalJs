@@ -5,6 +5,12 @@
       "nombre": "thais soto",
       "password": "1234",
       "rol": "estudiante"
+    },
+    {
+      "id": "29",
+      "nombre": "Jeanca Barberena",
+      "password": "1234",
+      "rol": "profesor"
     }
   ],
   "consultas": [
@@ -14,7 +20,7 @@
       "consulta": "No entiendo el ejercicio 3",
       "mensaje": "No hay mensaje del profesor",
       "hora": "2025-08-27T10:15:00",
-      "estado": "aceptado",
+      "estado": "rechazado",
       "nombre": "Alejandro"
     },
     {
@@ -23,7 +29,7 @@
       "consulta": "¿Cómo se usa map en JS?",
       "mensaje": "No hay mensaje del profesor",
       "hora": "2025-08-27T10:20:00",
-      "estado": "pendiente",
+      "estado": "rechazado",
       "nombre": "Moli"
     },
     {
@@ -32,7 +38,7 @@
       "consulta": "Tu me dejaste caer, pero ella me levantó",
       "mensaje": "En que le puedo ayudar?",
       "hora": "2025-08-27T19:31:50.095Z",
-      "estado": "pendiente",
+      "estado": "rechazado",
       "nombre": "Jean Carlos"
     },
     {
@@ -41,14 +47,15 @@
       "consulta": "Necesito ayuda",
       "mensaje": "No hay mensaje del profesor",
       "hora": "2025-08-28T19:36:13.322Z",
-      "estado": "aceptado"
+      "estado": "rechazado"
     },
     {
       "id": "6d20",
       "nombre": "Tamara",
       "consulta": "Como hago esto",
       "hora": "2025-08-28T21:08:28.758Z",
-      "estado": "pendiente"
+      "estado": "rechazado",
+      "mensaje": "No hay mensaje del profesor"
     }
   ]
 }
