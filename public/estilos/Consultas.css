@@ -1,0 +1,314 @@
+/* ----------- ESTILO GENERAL ----------- */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top, #0f0f1c, #1a1a2e);
+    color: #eaeaea;
+    backdrop-filter: blur(10px);
+}
+
+header {
+    background: rgba(104, 76, 175, 0.3);
+    color: #fff;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 15px 15px;
+}
+
+/* Contenedor título + usuario */
+.header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Bloque usuario */
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover */
+.user-info:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Imagen usuario */
+.user-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.5);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover imagen */
+.user-img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Nombre usuario */
+.user-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+
+/* ----------- MAIN ----------- */
+main {
+    padding: 20px;
+}
+
+/* ----------- FORM ----------- */
+form {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    backdrop-filter: blur(10px);
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+    box-shadow: 0 0 12px #6f6ff5;
+    background: rgba(255,255,255,0.15);
+}
+
+/* ----------- SECCIÓN LISTA ----------- */
+.lista-section {
+    margin-top: 30px;
+}
+
+/* ----------- BOTÓN LOGOUT ----------- */
+#logoutBtn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 90px;
+    background: rgba(194, 68, 68, 0.25);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .4s ease-in-out;
+    box-shadow: 0 4px 20px rgba(255,0,0,0.2);
+}
+
+#logoutBtn span {
+    position: absolute;
+    left: 20%;
+    transition: .4s ease-in-out all;
+}
+
+#logoutBtn .btn-cs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    left: -20px;
+    transition: .3s ease-in-out all;
+    opacity: 0;
+}
+
+#logoutBtn svg {
+    color: #fff;
+    width: 28px;
+    height: 28px;
+}
+
+#logoutBtn:hover {
+    background: rgba(202, 7, 7, 0.35);
+    box-shadow: 0 0 25px rgba(255,0,0,0.6);
+}
+
+#logoutBtn:hover .btn-cs {
+    left: calc(100% - 50px);
+    opacity: 1;
+}
+
+#logoutBtn:hover span {
+    left: 20px;
+}
+
+/* ----------- TARJETA CONSULTA ----------- */
+.consulta-card {
+    background: rgba(255,255,255,0.08);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.consulta-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(111, 111, 245, 0.3);
+}
+
+/* ----------- BOTONES ESTADO ----------- */
+.btn-estado {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    border: none;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.btn-estado:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 18px rgba(255,255,255,0.4);
+}
+
+.rechazado {
+    background: #f73333;
+    box-shadow: 0 0 10px #f73333;
+}
+
+.pendiente {
+    background: #dcc336;
+    box-shadow: 0 0 10px #d1bd4c;
+}
+
+.aceptado {
+    background: #00b894;
+    box-shadow: 0 0 10px #00b894;
+}
+
+/* ----------- BOTÓN A (Agregar) ----------- */
+.botonA {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 70px;
+    background: rgba(76, 175, 80, 0.25);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 4px 20px rgba(0,255,0,0.2);
+}
+
+.botonA span {
+    position: absolute;
+    left: 20%;
+    transition: .4s ease-in-out all;
+}
+
+.botonA .btn-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    left: -20px;
+    transition: .3s ease-in-out all;
+    opacity: 0;
+}
+
+.botonA svg {
+    color: #fff;
+    width: 28px;
+    height: 28px;
+}
+
+.botonA:hover {
+    background: rgba(47, 155, 5, 0.35);
+    box-shadow: 0 0 25px rgba(0,255,0,0.6);
+}
+
+.botonA:hover .btn-add {
+    left: calc(100% - 50px);
+    opacity: 1;
+}
+
+.botonA:hover span {
+    left: 20px;
+}
+
+/* ----------- BOTÓN CANCELAR ----------- */
+.boton-cancelar {
+    display: none;
+    margin-left: 10px;
+    padding: 15px 40px;
+    background: rgba(176,176,176,0.25);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    backdrop-filter: blur(8px);
+}
+
+.boton-cancelar:hover {
+    background: rgba(143,143,143,0.4);
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+/* ----------- BOTÓN EDITAR/ELIMINAR ----------- */
+.btn-editar {
+    background: rgba(255,255,255,0.08);
+    padding: 10px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    backdrop-filter: blur(8px);
+}
+
+.btn-eliminar {
+    background: rgba(255,255,255,0.08);
+    padding: 10px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    backdrop-filter: blur(8px);
+}
+
+.btn-editar:hover {
+    background: rgba(176,176,176,0.25);
+    box-shadow: 0 0 25px rgba(136, 0, 255, 0.6);
+}
+
+.btn-eliminar:hover {
+    background: rgba(176,176,176,0.25);
+    box-shadow: 0 0 25px rgba(255,0,0,0.6);
+}
