@@ -7,7 +7,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +35,7 @@ body {
 
 h2 {
     margin-bottom: 1rem;
-    color: #444;
+    color: #2c3e50;
 }
 
 /* Inputs y botón */
@@ -49,17 +49,17 @@ form input {
     transition: 0.3s;
 }
 
-/* Efecto NEÓN ROSA en focus */
+/* Efecto NEÓN VERDE en focus */
 form input:focus {
-    border-color: #ff007f;
-    box-shadow: 0 0 10px #ff007f;
+    border-color: #00c853;
+    box-shadow: 0 0 10px #00c853;
     outline: none;
 }
 
 form button {
     width: 100%;
     padding: 12px;
-    background: #6a11cb;
+    background: #11998e;
     color: #fff;
     font-size: 18px;
     font-weight: bold;
@@ -70,7 +70,7 @@ form button {
 }
 
 form button:hover {
-    background: #2575fc;
+    background: #38ef7d;
     transform: scale(1.05);
 }
 
@@ -81,7 +81,7 @@ form button:hover {
 }
 
 .toggle a {
-    color: #6a11cb;
+    color: #11998e;
     text-decoration: none;
     font-weight: bold;
 }

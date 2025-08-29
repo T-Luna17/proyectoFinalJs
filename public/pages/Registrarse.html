@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse - Sistema de Permisos</title>
+    <link rel="stylesheet" href="../estilos/estilos2.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="form-box" id="registerBox">
+            <h2>Registro de Usuario</h2>
+            <form id="registerForm">
+                <input type="text" id="registerName" placeholder="Nombre de usuario" required>
+                <input type="password" id="registerPassword" placeholder="Contraseña" required>
+                <button type="submit">Registrarse</button>
+            </form>
+            <p id="registerError" class="error"></p>
+            <p class="toggle">¿Ya tienes cuenta? <a href="inicio.html" id="showLogin">Inicia sesión aquí</a></p>
+        </div>
+    </div>
+
+    <script type="module" src="../js/registro.js"></script>
+</body>
+</html>
