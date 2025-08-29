@@ -1,4 +1,4 @@
-import { postUsuario } from './services.js';
+import { postData } from "../services/services.js";
 
 const registerForm = document.getElementById('registerForm');
 const registerError = document.getElementById('registerError');
@@ -17,9 +17,10 @@ registerForm.addEventListener('submit', async (e) => {
     const nuevoUsuario = { nombre, password, rol: "estudiante" };
 
     try {
-        await postUsuario(nuevoUsuario);
+        const peticion = await postData("usuarios",nuevoUsuario);
+        console.log(peticion);
         alert("✅ Usuario registrado con éxito. Ahora puedes iniciar sesión.");
-        window.location.href = "index.html"; // redirigir al login
+        // window.location.href = "index.html"; // redirigir al login
     } catch (err) {
         registerError.textContent = "❌ Error al registrar usuario.";
         console.error(err);
