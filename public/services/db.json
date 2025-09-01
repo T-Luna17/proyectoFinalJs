@@ -23,6 +23,12 @@
       "nombre": "Alejandro Machado",
       "password": "1717",
       "rol": "estudiante"
+    },
+    {
+      "id": "cba0",
+      "nombre": "Alfredo Torres",
+      "password": "1111",
+      "rol": "estudiante"
     }
   ],
   "consultas": [
@@ -31,21 +37,32 @@
       "nombre": "thais soto",
       "consulta": "Necesito ayuda para JS",
       "hora": "2025-09-01T19:18:20.092Z",
-      "estado": "pendiente"
+      "estado": "aceptado",
+      "mensaje": "No hay mensaje del profesor"
     },
     {
       "id": "71e3",
       "nombre": "Tamara Luna",
       "consulta": "Mi proyecto no funciona",
       "hora": "2025-09-01T19:20:03.347Z",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "mensaje": "Cual seria tu consulta"
     },
     {
       "id": "6766",
       "nombre": "Alejandro Machado",
       "consulta": "Tengo dudas con los estilos",
       "hora": "2025-09-01T19:21:12.565Z",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "mensaje": "No hay mensaje del profesor"
+    },
+    {
+      "id": "272e",
+      "nombre": "Alfredo Torres",
+      "consulta": "Tengo dudas con el proyecto",
+      "hora": "2025-09-01T19:35:33.772Z",
+      "estado": "rechazado",
+      "mensaje": "No hay mensaje del profesor"
     }
   ]
 }

@@ -23,7 +23,7 @@ if (inputNombre && sessionUser) {
 const logoutBtn = document.getElementById("logoutBtn");
 logoutBtn.addEventListener("click", () => {
   localStorage.removeItem("sessionUser");
-  window.location.href = 'index.html';
+  window.location.href = '../pages/inicio.html';
 });
 
 // --- Resto de tu código original ---
