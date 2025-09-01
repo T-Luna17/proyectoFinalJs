@@ -63,6 +63,14 @@
       "hora": "2025-09-01T19:35:33.772Z",
       "estado": "rechazado",
       "mensaje": "No hay mensaje del profesor"
+    },
+    {
+      "id": "20c5",
+      "nombre": "prueba",
+      "consulta": "prueba",
+      "desde": "2025-09-01",
+      "hasta": "2025-09-01",
+      "estado": "pendiente"
     }
   ]
 }
