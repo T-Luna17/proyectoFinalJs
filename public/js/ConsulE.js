@@ -6,7 +6,7 @@ const formTitle = document.getElementById("form-title");
 
 // --- Validar sesión y mostrar nombre de usuario ---
 const sessionUser = JSON.parse(localStorage.getItem('sessionUser'));
-if (!sessionUser) window.location.href = 'index.html';
+if (!sessionUser) window.location.href = '../pages/inicio.html';
 if (sessionUser.rol !== "estudiante") window.location.href = 'Consultas.html';
 
 const userNameElement = document.querySelector('.user-name');

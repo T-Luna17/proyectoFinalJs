@@ -7,7 +7,7 @@ const cancelBtn = document.getElementById("cancelBtn");
 
 // --- Validar sesión y mostrar nombre de usuario ---
 const sessionUser = JSON.parse(localStorage.getItem('sessionUser'));
-if (!sessionUser) window.location.href = 'index.html';
+if (!sessionUser) window.location.href = '../pages/inicio.html';
 if (sessionUser.rol !== "profesor") window.location.href = 'ConsultasE.html';
 
 const userNameElement = document.querySelector('.user-name');
