@@ -1,5 +1,6 @@
 {
   "usuarios": [
+<<<<<<< HEAD
     { "id": "0504", "nombre": "thais soto", "password": "1234", "rol": "estudiante" },
     { "id": "29",   "nombre": "Jeanca Barberena", "password": "1234", "rol": "profesor" },
     { "id": "d260", "nombre": "Jeje", "password": "1234", "rol": "estudiante" }
@@ -49,6 +50,54 @@
       "hora": "2025-08-28T21:08:28.758Z",
       "estado": "rechazada",
       "mensaje": "No hay mensaje del profesor"
+=======
+    {
+      "id": "0504",
+      "nombre": "thais soto",
+      "password": "1234",
+      "rol": "estudiante"
+    },
+    {
+      "id": "29",
+      "nombre": "Jeanca Barberena",
+      "password": "1234",
+      "rol": "profesor"
+    },
+    {
+      "id": "53ea",
+      "nombre": "Tamara Luna",
+      "password": "1502",
+      "rol": "estudiante"
+    },
+    {
+      "id": "aff5",
+      "nombre": "Alejandro Machado",
+      "password": "1717",
+      "rol": "estudiante"
+    }
+  ],
+  "consultas": [
+    {
+      "id": "1e82",
+      "nombre": "thais soto",
+      "consulta": "Necesito ayuda para JS",
+      "hora": "2025-09-01T19:18:20.092Z",
+      "estado": "pendiente"
+    },
+    {
+      "id": "71e3",
+      "nombre": "Tamara Luna",
+      "consulta": "Mi proyecto no funciona",
+      "hora": "2025-09-01T19:20:03.347Z",
+      "estado": "pendiente"
+    },
+    {
+      "id": "6766",
+      "nombre": "Alejandro Machado",
+      "consulta": "Tengo dudas con los estilos",
+      "hora": "2025-09-01T19:21:12.565Z",
+      "estado": "pendiente"
+>>>>>>> af78fcbd8579175dc2c126493af77b725bbc899d
     }
   ]
 }
