@@ -1,4 +1,4 @@
-import { getData, getConsultas, getUsuarioPorId } from './services/apiService.js';
+import { getData} from '../services/services.js';
 
 // ================ Utilidades ================
 const qs  = (sel) => document.querySelector(sel);

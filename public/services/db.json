@@ -29,6 +29,12 @@
       "nombre": "Alfredo Torres",
       "password": "1111",
       "rol": "estudiante"
+    },
+    {
+      "id": "32a6",
+      "nombre": "Tamara Luna",
+      "password": "aaaaaaaaaaaaaaaaaaaa",
+      "rol": "estudiante"
     }
   ],
   "consultas": [
@@ -37,8 +43,8 @@
       "nombre": "thais soto",
       "consulta": "Necesito ayuda para JS",
       "hora": "2025-09-01T19:18:20.092Z",
-      "estado": "aceptado",
-      "mensaje": "No hay mensaje del profesor"
+      "estado": "rechazado",
+      "mensaje": "¿Y qué quiere que haga?"
     },
     {
       "id": "71e3",
@@ -53,7 +59,7 @@
       "nombre": "Alejandro Machado",
       "consulta": "Tengo dudas con los estilos",
       "hora": "2025-09-01T19:21:12.565Z",
-      "estado": "pendiente",
+      "estado": "aceptado",
       "mensaje": "No hay mensaje del profesor"
     },
     {
